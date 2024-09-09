@@ -26,6 +26,7 @@ from rest_framework_simplejwt.views import (
 from post import urls as post_urls
 from user import urls as user_urls
 from likes import urls as likes_urls
+from friends import urls as friends_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,6 +35,7 @@ urlpatterns = [
     path('api/',include(post_urls)),
     path('api/',include(user_urls)),
     path('api/',include(likes_urls)),
+    path('api/',include(friends_urls)),
 ]
 
 if settings.DEBUG:

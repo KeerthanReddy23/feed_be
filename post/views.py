@@ -7,7 +7,6 @@ from .serializers import Postserializer
 @api_view(['POST'])
 def create_post(request):
     serializer = Postserializer(data=request.data)
-    print(request.data)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
